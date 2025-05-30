@@ -84,7 +84,7 @@ function RbxShader.new(
 	-- /* Screen can only be divided into multiples-of-4 parts */
 	argue( Configuration.ScreenDivision % 4 == 0 , ERROR[1] )
 	argue( CanvasSize , ERROR[3] )
-	argue( typeof(Shader) == 'Instance' and Shader:IsA('ModuleScript') , ERROR[4] )
+	argue( typeof(Shader) == 'Instance', ERROR[4] )
 	argue( CanvasSize:Min(Vector2.one*4) == Vector2.one*4 , ERROR[9] )
 	
 	-- /* Calculate the dimensions of each subdivisions */
