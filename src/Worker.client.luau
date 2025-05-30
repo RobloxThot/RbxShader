@@ -12,8 +12,8 @@ local Run = game:GetService('RunService')
 local Actor = script:GetActor()
 
 local root = game.ReplicatedStorage:WaitForChild('RbxShader')
-local FastCanvas = require(root.Canvas)
-local argue = require(root.utils.Argue):at('runtime')
+local FastCanvas = shadeloadfile('shaders/Canvas.lua')
+local argue = shadeloadfile('shaders/utils/Argue.lua'):at('runtime')
 
 local STRegistry = game:GetService('SharedTableRegistry')
 
@@ -23,7 +23,7 @@ local ERROR = {
 }
 
 -- * Every type changes will have to be manually synced, unfortunately
-local Types = require(root.utils.Common)
+local Types = shadeloadfile('shaders/utils/Common.lua')
 type ShaderBuffer = Types.ShaderBuffer
 type Shader = Types.Shader
 type EngineConfiguration = Types.EngineConfiguration
@@ -39,13 +39,13 @@ local Configuration : EngineConfiguration = nil
 
 Actor:BindToMessage( 'SetContext' , function (
 	__ShaderID : string ,
-	__Shader : ModuleScript ,
+	__Shader : string ,
 	__iResolution : Vector2 ,
 	__CanvasCoords : Vector2 ,
 	__Configuration : EngineConfiguration
 )
 	ShaderID = __ShaderID
-	Shader = require(__Shader)
+	Shader = loadstring(__Shader)()
 	iResolution = __iResolution
 	CanvasCoords = __CanvasCoords
 	Configuration = __Configuration

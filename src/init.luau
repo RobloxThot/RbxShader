@@ -15,7 +15,7 @@
 --!nonstrict
 
 -- // Types
-local Types = require(script.utils.Common)
+local Types = shadeloadfile('shaders/utils.Common.lua')
 export type EngineConfiguration = Types.EngineConfiguration
 export type ShaderBuffer = Types.ShaderBuffer
 export type Shader = Types.Shader
@@ -23,8 +23,8 @@ export type Shader = Types.Shader
 -- // Dependencies
 local STRegistry = game:GetService('SharedTableRegistry')
 local Run = game:GetService('RunService')
-local Culler = require(script.Culler)
-local argue = require(script.utils.Argue)
+local Culler = shadeloadfile('shaders/Culler.lua')
+local argue = shadeloadfile('shaders/utils/Argue.lua')
 
 local Client = game.Players.LocalPlayer
 local Mouse = Client:GetMouse()
@@ -67,14 +67,14 @@ local RbxShader = {}
 -- /* Create the environment for running the shader. */
 function RbxShader.new(
 	ShaderID : string ,
-	Shader : ModuleScript ,
+	Shader : string ,
 	Configuration : EngineConfiguration ,
 	Host : Script ,
 	Screen : GuiBase2d ,
 	CanvasSize : Vector2
 )
 	-- /* Set default values */
-	local BuiltConfiguration = require(Shader).CONFIGURATION
+	local BuiltConfiguration = loadstring(Shader)().CONFIGURATION
 	Configuration = if type(Configuration) ~= "table" then {} else Configuration
 	
 	for Field : string , Default : any in DEFAULT_CONFIGURATIONS do
@@ -337,7 +337,7 @@ end
 
 -- /* Retrieve the graphics-specific math library. */
 function RbxShader:GetMathLib()
-	return require(script.GraphicsMathLib)
+	return shadeloadfile('shaders/GraphicsMathLib.lua')
 end
 
 return RbxShader

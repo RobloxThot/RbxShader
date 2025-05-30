@@ -222,6 +222,6 @@ for operation : string, func : () -> any in math do
 	MathLib[operation] = func
 end
 
-MathLib.Vector4 = require(script.Parent.Vector4)
+MathLib.Vector4 = shadeloadfile('shaders/Vector4.lua')
 
 return MathLib
