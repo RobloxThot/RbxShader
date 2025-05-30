@@ -9,7 +9,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 local function map ( v : Vector3 , iTime : number )
 	return math.sqrt(

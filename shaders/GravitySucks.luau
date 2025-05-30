@@ -9,7 +9,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 -- // CC0: Gravity sucks
 -- //	Tinkering away....

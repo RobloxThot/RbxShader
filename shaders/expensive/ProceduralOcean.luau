@@ -10,7 +10,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 -- // #defines
 -- // Use your mouse to move the camera around! Press the Left Mouse Button on the image to look around!

@@ -10,7 +10,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 -- // `in` value system
 --	* designed to consume less memory by reusing old `in`s (which are just tables)

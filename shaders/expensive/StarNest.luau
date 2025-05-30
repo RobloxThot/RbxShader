@@ -12,7 +12,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 -- // #define
 local iterations = 17

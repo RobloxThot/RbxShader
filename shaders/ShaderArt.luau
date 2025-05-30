@@ -9,7 +9,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 
 --[=[
 	This animation is the material of my first youtube tutorial about creative 

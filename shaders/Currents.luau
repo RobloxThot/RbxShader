@@ -9,7 +9,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 local vec3 = Vector3.new
 local vec2 = Vector2.new
 local uvec3 = Vector3.one

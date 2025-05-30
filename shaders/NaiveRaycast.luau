@@ -10,7 +10,7 @@
 
 --!native
 
-local g = require(game.ReplicatedStorage.RbxShader.GraphicsMathLib)
+local g = shadeloadfile('shaders/GraphicsMathLib.luau')
 local Camera = workspace.CurrentCamera
 
 -- // #defines
