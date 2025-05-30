@@ -15,7 +15,7 @@
 --!nonstrict
 
 -- // Types
-local Types = shadeloadfile('shaders/utils.Common.luau')
+local Types = shadeloadfile('shaders/utils/Common.luau')
 export type EngineConfiguration = Types.EngineConfiguration
 export type ShaderBuffer = Types.ShaderBuffer
 export type Shader = Types.Shader
