@@ -15,7 +15,7 @@
 --!nonstrict
 
 -- // Types
-local Types = shadeloadfile('shaders/utils.Common.lua')
+local Types = shadeloadfile('shaders/utils.Common.luau')
 export type EngineConfiguration = Types.EngineConfiguration
 export type ShaderBuffer = Types.ShaderBuffer
 export type Shader = Types.Shader
@@ -23,8 +23,8 @@ export type Shader = Types.Shader
 -- // Dependencies
 local STRegistry = game:GetService('SharedTableRegistry')
 local Run = game:GetService('RunService')
-local Culler = shadeloadfile('shaders/Culler.lua')
-local argue = shadeloadfile('shaders/utils/Argue.lua')
+local Culler = shadeloadfile('shaders/Culler.luau')
+local argue = shadeloadfile('shaders/utils/Argue.luau')
 
 local Client = game.Players.LocalPlayer
 local Mouse = Client:GetMouse()
@@ -337,7 +337,7 @@ end
 
 -- /* Retrieve the graphics-specific math library. */
 function RbxShader:GetMathLib()
-	return shadeloadfile('shaders/GraphicsMathLib.lua')
+	return shadeloadfile('shaders/GraphicsMathLib.luau')
 end
 
 return RbxShader

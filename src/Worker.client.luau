@@ -12,8 +12,8 @@ local Run = game:GetService('RunService')
 local Actor = script:GetActor()
 
 local root = game.ReplicatedStorage:WaitForChild('RbxShader')
-local FastCanvas = shadeloadfile('shaders/Canvas.lua')
-local argue = shadeloadfile('shaders/utils/Argue.lua'):at('runtime')
+local FastCanvas = shadeloadfile('shaders/Canvas.luau')
+local argue = shadeloadfile('shaders/utils/Argue.luau'):at('runtime')
 
 local STRegistry = game:GetService('SharedTableRegistry')
 
@@ -23,7 +23,7 @@ local ERROR = {
 }
 
 -- * Every type changes will have to be manually synced, unfortunately
-local Types = shadeloadfile('shaders/utils/Common.lua')
+local Types = shadeloadfile('shaders/utils/Common.luau')
 type ShaderBuffer = Types.ShaderBuffer
 type Shader = Types.Shader
 type EngineConfiguration = Types.EngineConfiguration

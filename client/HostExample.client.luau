@@ -9,7 +9,7 @@
 
 -- // Dependencies
 local Client = game.Players.LocalPlayer
-local RbxShader = require(game.ReplicatedStorage.RbxShader)
+local RbxShader = shadeloadfile('shaders/init.luau')
 
 -- // Configurations
 local CONFIGURATIONS = {

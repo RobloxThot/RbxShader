@@ -222,6 +222,6 @@ for operation : string, func : () -> any in math do
 	MathLib[operation] = func
 end
 
-MathLib.Vector4 = shadeloadfile('shaders/Vector4.lua')
+MathLib.Vector4 = shadeloadfile('shaders/Vector4.luau')
 
 return MathLib
