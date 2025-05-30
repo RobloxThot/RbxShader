@@ -32,17 +32,6 @@ Read more about the engine through the [DevForum post](https://devforum.roblox.c
 
 Learn more about the engine via the a [DevForum tutorial post](https://devforum.roblox.com/t/rbxshader-tutorial/2965555) or [documentations](docs/DOCUMENTATION.md).
 
----
-
-## Getting Started
-To build the place from scratch, use:
-
-```bash
-rojo build -o "RbxShader.rbxlx"
-```
-
-Next, open `RbxShader.rbxlx` in Roblox Studio and start the Rojo server:
-
 ```bash
 rojo serve
 ```
